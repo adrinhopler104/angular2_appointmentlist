@@ -1,0 +1,14 @@
+
+<div [ngClass]="baseClass">                                                                                                                 <!-- div contatining title and appointments !-->
+    <div id="title" data-toggle = "tooltip" data-placement="top" title="">{{title}}</div>	                                                <!-- title div !-->																					
+    <ul class="appointments" >										
+    <li class="huge" *ngFor="let appointment of appointments">			
+            <div>
+                <div class="circle" data-toggle = "tooltip" data-placement="top" title="" [style.background] ="appointment.color"></div>    <!-- circle div!-->
+                <div [ngClass]="appointmentClass" data-toggle = "tooltip" data-placement="top" title="" >{{appointment.date}}</div>         <!--date div !-->
+                <div [ngClass] = "subjectClass" data-toggle = "tooltip" data-placement="top" title={{appointment.tooltip}} >                <!--description div with tooltip!-->
+                    {{appointment.description}}</div>
+            </div>
+        </li>															
+    </ul>																											
+</div>
